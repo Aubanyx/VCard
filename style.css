@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CARD */
+
+main > div > div:last-child {
+    background-color: goldenrod;
+    height: 1.7em;
+}
+
+main, img, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+main > div.card > div:first-child {
+    background-color: #383838;
+    color: goldenrod;
+    padding: 2em 1em 1.2em 1em;
+}
+
+main > div.card > div > h1, h2 {
+    font-weight: lighter;
+}
+
+main > div.card > div > h1 {
+    font-size: 1.8em;
+}
+
+main > div.card > div > h2 {
+    font-size: 1.1em;
+    margin-top: 0.55em;
+}
+
+main > div.card > div > img {
+    width: 8em;
+    border: solid 0.3em goldenrod;
+    border-radius: 100%;
+    margin-bottom: 1em;
+}
+
+main > div.card {
+    position: absolute;
+    top: 10%;
+    width: 30%;
+    height: 17em;
+    left: 35%;
+    text-align: center;
+}
+
+main > div.card > div > a > svg {
+    font-size: 2.5em;
+    margin: 0.5em 0.5em 0 0.5em;
+    color: goldenrod;
+}
+
+main > div.card > div > a > svg:hover {
+    transition: font-size, color 1s ;
+    font-size: 2.7em;
+    color: white;
+}
