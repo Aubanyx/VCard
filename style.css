@@ -9,9 +9,52 @@ main {
 
 /* CARD */
 
-main > div > div:last-child {
+#cardHidden {
     background-color: goldenrod;
     height: 1.7em;
+    border-radius: 0;
+    transition: all 2s ease-in-out;
+    transform-origin: top;
+    transform: rotatex(180deg);
+}
+
+#cardHidden:target {
+    height: 22.7em;
+    border-radius: 0 0 1em 0;
+}
+
+#infoHidden {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 0;
+    margin-left: 7.3em;
+    transition: visibility 2s, opacity 2s ease-in-out;
+}
+
+#cardHidden:target ~ #infoHidden {
+    visibility: visible;
+    opacity: 1;
+}
+
+#infoHidden > p > svg {
+    font-size: 3em;
+    color: #383838;
+    transition: color 0.5s ease-in-out;
+}
+
+#infoHidden > p > svg:hover {
+    color: white;
+}
+
+#home, #mail, #tel {
+    color: #383838;
+    cursor: default;
+}
+
+#infoHidden > p > svg:nth-child(2) {
+    margin: 0 1em;
 }
 
 main, img, h1, h2 {
@@ -22,7 +65,8 @@ main, img, h1, h2 {
 main > div.card > div:first-child {
     background-color: #383838;
     color: goldenrod;
-    padding: 2em 1em 1.2em 1em;
+    padding: 2em 1em 3em 1em;
+    border-radius: 0 1em 0 0;
 }
 
 main > div.card > div > h1, h2 {
@@ -48,9 +92,9 @@ main > div.card > div > img {
 main > div.card {
     position: absolute;
     top: 10%;
-    width: 30%;
+    width: 32%;
     height: 17em;
-    left: 35%;
+    left: 34%;
     text-align: center;
 }
 
@@ -58,10 +102,10 @@ main > div.card > div > a > svg {
     font-size: 2.5em;
     margin: 0.5em 0.5em 0 0.5em;
     color: goldenrod;
+    transition: font-size 0.2s ease-in-out, color 0.5s ease-in-out;
 }
 
 main > div.card > div > a > svg:hover {
-    transition: font-size, color 1s ;
     font-size: 2.7em;
     color: white;
 }
